@@ -30,6 +30,9 @@
 *.iml
 out
 gen</template>
+      <template name="windowsIgn">
+          _windows
+      </template>
     </userTemplates>
   </component>
 </application>
