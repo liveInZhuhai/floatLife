@@ -45,7 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-/.idea/
-
-
-/.idea/misc.xml
+/.idea
+/out
+/.idea/floatLife.iml
