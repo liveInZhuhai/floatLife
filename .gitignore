@@ -49,3 +49,4 @@ Temporary Items
 /out
 /.idea/floatLife.iml
 ./*.xml
+./plugin_ui.xml
