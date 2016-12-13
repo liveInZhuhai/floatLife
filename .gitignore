@@ -48,5 +48,5 @@ Temporary Items
 /.idea
 /out
 /.idea/floatLife.iml
-./*.xml
-./plugin_ui.xml
+.iml
+/floatLife.iml
