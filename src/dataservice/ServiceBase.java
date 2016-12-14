@@ -1,24 +1,22 @@
 package dataservice;
 
+import dataservice.connectionpool.ConnFactory;
+import dataservice.connectionpool.ConnPoolConfig;
+import org.apache.commons.pool2.impl.GenericObjectPool;
+
 import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /**
  * Created by D on 2016/12/12.
  */
 public abstract class ServiceBase {
-    public Connection getConnection() {
-        Connection conn = null;
+    final static GenericObjectPool<Connection> genericObjectPool = new GenericObjectPool(new ConnFactory(),new ConnPoolConfig());
+    public static Connection getConnection(){
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://115.159.59.72/zhfloat", "manage", "abc012300");
-
-        } catch (ClassNotFoundException | SQLException e) {
+            return genericObjectPool.borrowObject();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return conn;
+        return null;
     }
 }
