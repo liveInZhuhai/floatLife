@@ -1,82 +1,36 @@
+
 package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
-import dataservice.entity.Player;
+import dataservice.entity.Item;
 
 import java.lang.management.PlatformLoggingMXBean;
 import java.sql.*;
 import java.util.*;
 
 /**
- * Created by D on 2016/12/12.
+ * Created by HK on 2016/12/12.
  */
-public class PlayerService extends ServiceBase {
-    private static PlayerService ps = null;
+public class ItemService extends ServiceBase {
+    private static ItemService is = null;
 
     /**
      * 单例的服务获取方法，供api中进行玩家信息的操作
-     * @return PlayerService对象
+     * @return ItemService对象
      */
-    public static PlayerService getPlayerService(){
-        if(ps == null){
-            ps = new PlayerService();
+    public static ItemService getItemService(){
+        if(is == null){
+            is = new ItemService();
         }
-        return ps;
+        return is;
     }
 
     /**
-     * 根据用户名查找
-     * @param playername 用户名
-     * @return 对应的palyer实体
+     * 按id查找Item
+     * @param id 欲查找Item的id
+     * @return Item对象 数据表中的数据将会被填充进去
      */
-    public Player findByUsername(String playername){
-        //获取链接
-        Connection conn = getConnection();
-
-        //mysql语句对象
-        PreparedStatement findPS = null;
-
-        try {
-            //对sql语句进行预编译
-            findPS = conn.prepareStatement("SELECT * FROM player WHERE playername=?");
-
-            //对sql变量赋值
-            findPS.setString(1,playername);
-
-            //取回结果集
-            ResultSet rs = findPS.executeQuery();
-
-            //如无结果则返回null
-            if(!rs.next()){
-                return null;
-            }
-
-            //新建结果实体
-            Player jg = new Player();
-
-            //使用结果集填充结果实体
-            playerDataSet(jg,rs);
-
-            //关闭结果集及连接
-            findPS.close();
-            rs.close();
-
-            //返回结果
-            return jg;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            returnConnection(conn);
-        }
-        return null;
-    }
-
-    /**
-     * 按id查找Player
-     * @param id 欲查找Player的id
-     * @return Player对象 数据表中的数据将会被填充进去
-     */
-    public Player findById(int id){
+    public Item findById(int id){
         //获取链接
         Connection conn = getConnection();
 
@@ -90,7 +44,7 @@ public class PlayerService extends ServiceBase {
 
         try {
             //对sql语句进行预编译
-            findPS = conn.prepareStatement("SELECT * FROM player WHERE id=?");
+            findPS = conn.prepareStatement("SELECT * FROM item WHERE id=?");
 
             //对sql变量赋值
             findPS.setInt(1,id);
@@ -104,10 +58,10 @@ public class PlayerService extends ServiceBase {
             }
 
             //新建结果实体
-            Player jg = new Player();
+            Item jg = new Item();
 
             //使用结果集填充结果实体
-            playerDataSet(jg,rs);
+            itemDataSet(jg,rs);
 
             //关闭结果集及连接
             findPS.close();
@@ -128,7 +82,7 @@ public class PlayerService extends ServiceBase {
      * @param newpl 一个Player类型的对象 其中只需对playername以及password赋值
      * @return 返回创建完成后的Player实体 如插入失败则返回null
      */
-    public Player addPlayer(Player newpl){
+    public Item addItem(Item newpl){
         //通过基类的getConnection方法获取链接对象
         Connection conn = getConnection();
         //新建sql语句对象
@@ -140,11 +94,10 @@ public class PlayerService extends ServiceBase {
 
         try {
             //对mysql语句进行预编译
-            addPS = conn.prepareStatement("INSERT INTO player(playername,password) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
+            addPS = conn.prepareStatement("INSERT INTO (itemname) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
 
             //填入参数字符串
-            addPS.setString(1,newpl.getPlayerName());
-            addPS.setString(2,newpl.getPassword());
+            addPS.setString(1,newpl.getItemName());
 
             //执行插入
             addPS.executeUpdate();
@@ -182,12 +135,12 @@ public class PlayerService extends ServiceBase {
         //获取链接
         Connection conn = getConnection();
 
-            //mysql语句对象
-            PreparedStatement findPS = null;
+        //mysql语句对象
+        PreparedStatement findPS = null;
 
-            try {
+        try {
             //对sql语句进行预编译
-            findPS = conn.prepareStatement("DELETE FROM player WHERE id=?");
+            findPS = conn.prepareStatement("DELETE FROM item WHERE id=?");
 
             //对sql变量赋值
             findPS.setInt(1,id);
@@ -209,15 +162,12 @@ public class PlayerService extends ServiceBase {
      * @param rs 结果集
      * @throws SQLException
      */
-    private void playerDataSet(Player jg,ResultSet rs) throws SQLException{
+    private void itemDataSet(Item jg,ResultSet rs) throws SQLException{
         jg.setId(rs.getInt("id"));
-        jg.setPlayerName(rs.getString("playername"));
-        jg.setPassword(rs.getString("password"));
-        jg.setFinId(rs.getInt("fin_id"));
-        jg.setHealth(rs.getInt("health"));
-        jg.setReputation(rs.getInt("reputation"));
-        jg.setCreate_date(new java.util.Date(rs.getTimestamp("create_date").getTime()));
-        jg.setInsurance(rs.getInt("insurance"));
+        jg.setItemName(rs.getString("itemName"));
+        jg.setBasePrize(rs.getDouble("baseprize"));
+        jg.setReputationEffect(rs.getInt("reputationeffect"));
+        jg.setRare(rs.getInt("rare"));
     }
 
 }
