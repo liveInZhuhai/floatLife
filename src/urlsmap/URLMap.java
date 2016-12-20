@@ -10,7 +10,7 @@ public class URLMap {
 
      public static Map URLs = new HashMap();
     static {
-        URLs.put("/login","aa#aaa");
+        URLs.put("/login","urlsmap.aa#aaa");
 
 
     }
