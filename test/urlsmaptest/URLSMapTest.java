@@ -1,6 +1,9 @@
 package urlsmaptest;
 
-import urlsmap.AnalyseURL;
+
+
+import service.urlsmap.Router;
+import service.urlsmap.URLMap;
 
 import java.io.OutputStream;
 import java.util.HashMap;
@@ -11,10 +14,10 @@ import java.util.Map;
  */
 public class URLSMapTest {
     public static void main(String[] args) throws ClassNotFoundException {
-
+        URLMap.URLs.put("/test","urlsmaptest.aa#aaa");
         Map map = new HashMap();
         OutputStream outputStream = null;
-      AnalyseURL.directMethod("/login",map,outputStream);
+        Router.directMethod("/test",map,outputStream);
 
     }
 

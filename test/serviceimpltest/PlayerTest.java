@@ -5,12 +5,13 @@ import dataservice.entity.Player;
 import dataservice.serviceimpl.PlayerService;
 
 /**
+ *
  * Created by D on 2016/12/14.
  */
 public class PlayerTest {
 
     public static void main(String[] args) {
-        PlayerService ps = new PlayerService();
+        PlayerService ps = PlayerService.getPlayerService();
         System.out.println("Start to Insert..");
         Player pl = new Player();
         pl.setPlayerName("DDD");
