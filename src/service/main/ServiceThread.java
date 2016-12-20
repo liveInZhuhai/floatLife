@@ -56,76 +56,42 @@ public class ServiceThread extends Thread {
 
 
     /**
-     * 分析http请求中的url,分析用户请求的资源，并将请求url规范化
-     * 例如请求 "/"要规范成"/index.html","/index"要规范成"/index.html"
-     * @param queryurl 用户原始的url
-     * @return 规范化的url，即为用户请求资源的路径
-     */
-    private String getQueryResource(String queryurl) {
-        String queryResource;
-
-        int index=queryurl.indexOf('?');
-        if(index!=-1)
-        {
-            queryResource=queryurl.substring(0,queryurl.indexOf('?'));
-        }
-        else
-            queryResource=queryurl;
-
-        index=queryResource.lastIndexOf("/");
-        if(index+1==queryResource.length())
-        {
-            queryResource=queryResource+"index.html";
-        }
-        else
-        {
-            String filename=queryResource.substring(index+1);
-            if(!filename.contains("."))
-                queryResource=queryResource+".html";
-        }
-        return queryResource;
-
-    }
-
-
-    /**
      * 根据用户请求的资源类型，设定http响应头的信息，主要是判断用户请求的文件类型（html、jpg...）
      * @param queryResource  如传入参数为jsonHead则返回json头
-     * @return
+     * @return 请求头的二进制数组
      */
-    private String getHead(String queryResource) {
+    private byte[] getHead(String queryResource) {
         if(queryResource.equals("jsonHead")){
-            return "HTTP/1.0 200 OK\nServer:"+serverName+"\nCache-Control: no-cache, no-store, max-age=0\nContent-Type: application/json; charset=utf-8\n\n";
-
+            return ("HTTP/1.0 200 OK\nServer:"+serverName+"\nCache-Control: no-cache, no-store, max-age=0\nContent-Type: application/json; charset=utf-8\n\n").getBytes();
         }
-        int index=queryResource.lastIndexOf("/");
-        String filename=queryResource.substring(index+1);
-        String[] fileTypes=filename.split("\\.");
-        String fileType=fileTypes[fileTypes.length-1];
-        String head= null;
-        if(fileType.equals("html"))
-        {
-            head =  "HTTP/1.0 200 OK\n"+"Content-Type:text/html\n" + "Server:"+serverName+"\n" ;
+        int index=queryResource.lastIndexOf(".");
+        String fileType=queryResource.substring(index+1);
+        String head= "HTTP/1.0 200 OK\n";
+        if(fileType.equals("html")) {
+            head +=  "Content-Type:text/html\n" + "Server:"+serverName+"\n" ;
         }
-        else if(fileType.equals("jpg")||fileType.equals("gif")||fileType.equals("png"))
-        {
-            head =  "HTTP/1.0 200 OK\n"+"Content-Type:image/jpeg\n" + "Server:"+serverName+"\n" ;
+        else if(fileType.equals("jpg")||fileType.equals("gif")||fileType.equals("png")) {
+            head +=  "Content-Type:image/jpeg\n";
         }
-        else if(fileType.equals("js"))
+        else if(fileType.equals("js")) {
+            head +=  "Content-Type:application/x-javascript\n";
+        }
+        else if(fileType.equals("ico"))
         {
-            head =  "HTTP/1.0 200 OK\n"+"Content-Type:application/x-javascript\n" + "Server:"+serverName+"\n" ;
-        }else if(fileType.equals("ico"))
-        {
-            head =  "HTTP/1.0 200 OK\n"+"Content-Type:image/x-icon\n" + "Server:"+serverName+"\n" ;
-        }else if (fileType.equals("css")){
-            head =  "HTTP/1.0 200 OK\n"+"Content-Type:text/css\n" + "Server:"+serverName+"\n" ;
+            head +=  "Content-Type:image/x-icon\n";
+        }
+        else if (fileType.equals("css")){
+            head +=  "Content-Type:text/css\n";
+        }else {
+            head +=  "Content-Type:text\n";
         }
 
-        if(head != null){
-            head += "Cache-Control: no-cache\n" +  "\n";
-            return head;
-        }
-        return null;
+        head += "Server:"+serverName+"\n";
+
+        head += "Cache-Control: no-cache\n" +  "\n";
+
+        return head.getBytes();
+
 
     }
 
@@ -142,18 +108,20 @@ public class ServiceThread extends Thread {
     }
 
     private  void getRequestBody() throws IOException{
-        requestBody = "";
+        StringBuilder requestB = new StringBuilder("");
         int a;
 
         while((a = br.read())!=41){
-            requestBody += (char)a;
+            requestB.append((char)a);
         }
 
+        requestBody = requestB.toString();
         System.out.println(requestBody);
     }
 
     private boolean isStaticResource(){
         if(queryUrl.length()<=1){
+            queryUrl += "index.html";
             return true;
         }
         int temp = queryUrl.lastIndexOf('/');
@@ -169,9 +137,9 @@ public class ServiceThread extends Thread {
     }
 
     public void staticResourceOutput() throws IOException{
-        String resource = getQueryResource(queryUrl);
-        os.write(getHead(resource).getBytes());
-        os.write(getFileByte("webapp" + resource));
+
+        os.write(getHead(queryUrl));
+        os.write(getFileByte("webapp" + queryUrl));
     }
 
     @Override
@@ -217,7 +185,7 @@ public class ServiceThread extends Thread {
                     staticResourceOutput();
                 }
             }else{
-                os.write(getHead("jsonHead").getBytes());
+                os.write(getHead("jsonHead"));
                 Router.directMethod(queryUrl,paramMap,os);
             }
 
