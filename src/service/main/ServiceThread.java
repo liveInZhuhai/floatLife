@@ -216,6 +216,7 @@ public class ServiceThread extends Thread {
                     staticResourceOutput();
                 }
             }else{
+                os.write(getHead("jsonHead").getBytes());
                 Router.directMethod(queryUrl,paramMap,os);
             }
 
