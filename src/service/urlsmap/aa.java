@@ -1,4 +1,4 @@
-package urlsmap;
+package service.urlsmap;
 
 import java.io.OutputStream;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package urlsmap;
+package service.urlsmap;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ public class URLMap {
 
      public static Map URLs = new HashMap();
     static {
-        URLs.put("/login","urlsmap.aa#aaa");
+        URLs.put("/login","service.urlsmap.aa#aaa");
 
 
     }
