@@ -76,7 +76,7 @@ public class PlayerService extends ServiceBase {
      * @param id 欲查找Player的id
      * @return Player对象 数据表中的数据将会被填充进去
      */
-    public Player findById(int id){
+    public Player findById(int id) {
         //获取链接
         Connection conn = getConnection();
 
