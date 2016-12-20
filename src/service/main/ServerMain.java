@@ -1,6 +1,6 @@
 package service.main;
 /**
- *
+ * 服务端主类 用于启动服务
  * Created by D on 2016/10/29.
  */
 

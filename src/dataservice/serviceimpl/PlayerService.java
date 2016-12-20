@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.*;
 
 /**
+ * Player表Service
  * Created by D on 2016/12/12.
  */
 public class PlayerService extends ServiceBase {

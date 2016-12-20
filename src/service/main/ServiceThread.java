@@ -11,6 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * 服务端服务线程类
  * Created by D on 2016/12/20.
  */
 public class ServiceThread extends Thread {

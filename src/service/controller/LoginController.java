@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Admini on 2016/12/20.
+ * Created by Y on 2016/12/20.
  */
 public class LoginController extends ControllerBase{
 
@@ -36,7 +36,7 @@ public class LoginController extends ControllerBase{
             }
         }
         try {
-            outputStream.write(getJson(returnMap));
+            outputStream.write(map2Json(returnMap));
         } catch (IOException e) {
             e.printStackTrace();
         }

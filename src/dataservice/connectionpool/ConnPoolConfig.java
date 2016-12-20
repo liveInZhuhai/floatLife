@@ -1,6 +1,11 @@
 package dataservice.connectionpool;
 
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
+/**
+ * Created by Y on 2016/12/13.
+ *
+ *
+ */
 
 /**
  *        lifo ：对象池存储空闲对象是使用的LinkedBlockingDeque，它本质上是一个支持FIFO和FILO的双向的队列，common-pool2中的LinkedBlockingDeque不是Java原生的队列，而有common-pool2重新写的一个双向队列。如果为false，表示使用FIFO获取对象。默认值是false.建议使用默认值。

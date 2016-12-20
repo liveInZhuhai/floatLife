@@ -1,14 +1,13 @@
 package entityintomaptest;
 
+import com.alibaba.fastjson.JSON;
 import dataservice.entity.Player;
-import dataservice.serviceimpl.PlayerService;
-import service.controller.ControllerBase;
 import service.controller.LoginController;
 
 import java.util.Map;
 
 /**
- * Created by Admini on 2016/12/20.
+ * Created by Y on 2016/12/20.
  */
 public class EntityIntoMapTest {
 
@@ -22,7 +21,7 @@ public class EntityIntoMapTest {
         player.setPlayerName("555555555555555555555sss");
 
         LoginController loginController = new LoginController();
-        Map map = loginController.getReturnMap(player);
-        System.out.println(map.toString());
+        Map map = loginController.obj2Map(player);
+        System.out.println(JSON.toJSONString(map));
     }
 }
