@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Created by Admini on 2016/12/19.
  */
-public class AnalyseURL {
+public class Router {
 
 
 

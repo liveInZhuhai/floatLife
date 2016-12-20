@@ -1,6 +1,8 @@
 package urlsmaptest;
 
-import urlsmap.AnalyseURL;
+
+
+import service.urlsmap.Router;
 
 import java.io.OutputStream;
 import java.util.HashMap;
@@ -14,7 +16,7 @@ public class URLSMapTest {
 
         Map map = new HashMap();
         OutputStream outputStream = null;
-      AnalyseURL.directMethod("/login",map,outputStream);
+        Router.directMethod("/login",map,outputStream);
 
     }
 
