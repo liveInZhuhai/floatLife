@@ -8,9 +8,9 @@ import java.util.Map;
  */
 public class URLMap {
 
-     public static Map URLs = new HashMap();
+    public static Map URLs = new HashMap();
     static {
-        URLs.put("/login","service.urlsmap.aa#aaa");
+        URLs.put("/login","");
 
 
     }

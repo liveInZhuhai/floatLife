@@ -39,9 +39,9 @@ public class ServerMain {
             //当有访问时获取socket对象
             Socket client = server.accept();
             //新建服务线程
-            ServiceThread serverthread = new ServiceThread(client);
+            ServiceThread serverThread = new ServiceThread(client);
             //启动线程
-            serverthread.start();
+            serverThread.start();
         }
     }
 }
