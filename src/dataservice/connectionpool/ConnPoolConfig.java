@@ -31,11 +31,11 @@ public class ConnPoolConfig extends GenericObjectPoolConfig {
         setMinIdle(5);
         setMaxIdle(120);
         setMaxTotal(140);
-        setTestOnBorrow(false);
-        setBlockWhenExhausted(false);
-        setTestOnCreate(false);
-        setTestOnBorrow(false);
-        setTestOnReturn(false);
-        setTestWhileIdle(false);
+        setTestOnBorrow(true);
+        setBlockWhenExhausted(true);
+        setTestOnCreate(true);
+        setTestOnBorrow(true);
+        setTestOnReturn(true);
+        setTestWhileIdle(true);
     }
 }

@@ -11,7 +11,16 @@ import java.sql.Connection;
  * Created by D on 2016/12/12.
  */
 public abstract class ServiceBase {
-    final static GenericObjectPool<Connection> genericObjectPool = new GenericObjectPool(new ConnFactory(),new ConnPoolConfig());
+    static GenericObjectPool<Connection> genericObjectPool;
+    public static void inilizeConnectionPool(){
+        genericObjectPool = new GenericObjectPool(new ConnFactory(),new ConnPoolConfig());
+        try {
+            genericObjectPool.addObject();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public Connection getConnection(){
         try {
             return genericObjectPool.borrowObject();
@@ -22,5 +31,10 @@ public abstract class ServiceBase {
     }
     public void returnConnection(Connection conn){
         genericObjectPool.returnObject(conn);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

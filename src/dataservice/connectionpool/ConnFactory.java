@@ -5,6 +5,7 @@ import org.apache.commons.pool2.impl.DefaultPooledObject;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import static dataservice.connectionpool.MysqlConfig.password;
 import static dataservice.connectionpool.MysqlConfig.url;
@@ -43,5 +44,17 @@ public class ConnFactory extends BasePooledObjectFactory<Connection> {
         return new DefaultPooledObject<Connection>(mysqlConnect);
     }
 
+    public boolean validateObject(PooledObject<Connection> p) {
+        boolean judge =false;
+        try {
+          judge = p.getObject().isClosed();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (!judge){
+            return true;
+        }
+        return false;
+    }
 
 }
