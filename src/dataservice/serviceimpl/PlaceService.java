@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by HK on 2016/12/12.
  */
-public class PlaceService extends ServiceBase {
+public class PlaceService extends ServiceBase<Place> {
     private static PlaceService ps = null;
 
     /**
@@ -82,7 +82,7 @@ public class PlaceService extends ServiceBase {
      * @param newpl 一个Player类型的对象 其中只需对placename以及password赋值
      * @return 返回创建完成后的Player实体 如插入失败则返回null
      */
-    public Place addPlace(Place newpl){
+    public Place add(Place newpl){
         //通过基类的getConnection方法获取链接对象
         Connection conn = getConnection();
         //新建sql语句对象
@@ -155,6 +155,8 @@ public class PlaceService extends ServiceBase {
         }
         return false;
     }
+
+
 
     /**
      * 通过结果集将信息映射到实体

@@ -1,36 +1,30 @@
-
 package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
-import dataservice.entity.Item;
+import dataservice.entity.Fin;
+import dataservice.entity.Place;
+import dataservice.entity.Player;
 
-import java.lang.management.PlatformLoggingMXBean;
 import java.sql.*;
-import java.util.*;
 
 /**
- * Created by HK on 2016/12/12.
+ * Created by Y on 2016/12/22.
  */
-public class ItemService extends ServiceBase<Item> {
-    private static ItemService is = null;
-
+public class FinService extends ServiceBase<Fin> {
+    private static FinService fs = null;
     /**
      * 单例的服务获取方法，供api中进行玩家信息的操作
-     * @return ItemService对象
+     * @return FinService对象
      */
-    public static ItemService getItemService(){
-        if(is == null){
-            is = new ItemService();
+    public static FinService getPlaceService(){
+        if(fs == null){
+            fs = new FinService();
         }
-        return is;
+        return fs;
     }
 
-    /**
-     * 按id查找Item
-     * @param id 欲查找Item的id
-     * @return Item对象 数据表中的数据将会被填充进去
-     */
-    public Item findById(int id){
+    @Override
+    public Fin findById(int id) {
         //获取链接
         Connection conn = getConnection();
 
@@ -44,7 +38,7 @@ public class ItemService extends ServiceBase<Item> {
 
         try {
             //对sql语句进行预编译
-            findPS = conn.prepareStatement("SELECT * FROM item WHERE id=?");
+            findPS = conn.prepareStatement("SELECT * FROM fin WHERE id=?");
 
             //对sql变量赋值
             findPS.setInt(1,id);
@@ -58,10 +52,10 @@ public class ItemService extends ServiceBase<Item> {
             }
 
             //新建结果实体
-            Item jg = new Item();
+            Fin jg = new Fin();
 
             //使用结果集填充结果实体
-            itemDataSet(jg,rs);
+            finDataSet(jg,rs);
 
             //关闭结果集及连接
             findPS.close();
@@ -77,12 +71,8 @@ public class ItemService extends ServiceBase<Item> {
         return null;
     }
 
-    /**
-     * 添加新玩家
-     * @param newpl 一个Player类型的对象 其中只需对playername以及password赋值
-     * @return 返回创建完成后的Player实体 如插入失败则返回null
-     */
-    public Item add(Item newpl){
+    @Override
+    public Fin add(Fin newpl) {
         //通过基类的getConnection方法获取链接对象
         Connection conn = getConnection();
         //新建sql语句对象
@@ -94,10 +84,11 @@ public class ItemService extends ServiceBase<Item> {
 
         try {
             //对mysql语句进行预编译
-            addPS = conn.prepareStatement("INSERT INTO (itemname) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+            addPS = conn.prepareStatement("INSERT INTO fin(cash,debt) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
 
             //填入参数字符串
-            addPS.setString(1,newpl.getItemName());
+            addPS.setInt(1,newpl.getCash());
+            addPS.setInt(2,newpl.getDebt());
 
             //执行插入
             addPS.executeUpdate();
@@ -129,31 +120,8 @@ public class ItemService extends ServiceBase<Item> {
         return newpl;
     }
 
-
-
-    public boolean delete(int id){
-        //获取链接
-        Connection conn = getConnection();
-
-        //mysql语句对象
-        PreparedStatement findPS = null;
-
-        try {
-            //对sql语句进行预编译
-            findPS = conn.prepareStatement("DELETE FROM item WHERE id=?");
-
-            //对sql变量赋值
-            findPS.setInt(1,id);
-
-            //执行sql语句 并返回结果
-            return findPS.execute();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            returnConnection(conn);
-        }
-        return false;
+    public boolean delete(int id) {
+       return delete(id,"fin");
     }
 
     /**
@@ -162,12 +130,16 @@ public class ItemService extends ServiceBase<Item> {
      * @param rs 结果集
      * @throws SQLException
      */
-    private void itemDataSet(Item jg,ResultSet rs) throws SQLException{
+    protected void finDataSet(Fin jg, ResultSet rs) throws SQLException{
         jg.setId(rs.getInt("id"));
-        jg.setItemName(rs.getString("itemName"));
-        jg.setBasePrize(rs.getDouble("baseprize"));
-        jg.setReputationEffect(rs.getInt("reputationeffect"));
-        jg.setRare(rs.getInt("rare"));
+        jg.setCash(rs.getInt("cash"));
+        jg.setDebt(rs.getInt("debt"));
+        jg.setFunds(rs.getInt("funds"));
+        jg.setFundsRate(rs.getInt("funds_rate"));
+        jg.setFixedDeposit(rs.getInt("fixed_deposit"));
+        jg.setFixedDepositRate(rs.getInt("fixed_deposit_rate"));
+        jg.setCurrentDeposit(rs.getInt("current_deposit"));
+        jg.setCurrentDepositRate(rs.getInt("current_deposit_rate"));
+        jg.setRent(rs.getInt("rent"));
     }
-
 }

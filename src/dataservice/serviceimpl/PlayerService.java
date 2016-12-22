@@ -11,7 +11,7 @@ import java.util.*;
  * Player表Service
  * Created by D on 2016/12/12.
  */
-public class PlayerService extends ServiceBase {
+public class PlayerService extends ServiceBase<Player> {
     private static PlayerService ps = null;
 
     /**
@@ -129,7 +129,7 @@ public class PlayerService extends ServiceBase {
      * @param newpl 一个Player类型的对象 其中只需对playername以及password赋值
      * @return 返回创建完成后的Player实体 如插入失败则返回null
      */
-    public Player addPlayer(Player newpl){
+    public Player add(Player newpl){
         //通过基类的getConnection方法获取链接对象
         Connection conn = getConnection();
         //新建sql语句对象
