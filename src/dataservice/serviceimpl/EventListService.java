@@ -21,6 +21,9 @@ public class EventListService extends ServiceBase<Event> {
         return els;
     }
 
+    private EventListService() {
+    }
+
     public ArrayList<Event> findAll(){
         //获取链接
         Connection conn = getConnection();

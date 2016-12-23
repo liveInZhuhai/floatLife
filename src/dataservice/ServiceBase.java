@@ -42,7 +42,9 @@ public abstract class ServiceBase<T> {
     }
 
     public abstract T findById(int id);
-    public abstract T add(T newpl);
+    public  T add(T newpl){
+        return null;
+    }
     protected boolean delete(int id,String sheetName){
         //获取链接
         Connection conn = getConnection();
@@ -66,6 +68,6 @@ public abstract class ServiceBase<T> {
             returnConnection(conn);
         }
         return false;
-    };
+    }
     public abstract boolean delete(int id);
 }

@@ -25,6 +25,9 @@ public class ItemService extends ServiceBase<Item> {
         return is;
     }
 
+    private ItemService() {
+    }
+
     public ArrayList<Item> findAll(){
         //获取链接
         Connection conn = getConnection();

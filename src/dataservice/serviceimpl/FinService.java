@@ -23,6 +23,9 @@ public class FinService extends ServiceBase<Fin> {
         return fs;
     }
 
+    private FinService() {
+    }
+
     @Override
     public Fin findById(int id) {
         //获取链接

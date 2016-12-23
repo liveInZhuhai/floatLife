@@ -25,6 +25,9 @@ public class PlaceService extends ServiceBase<Place> {
         return ps;
     }
 
+    private PlaceService() {
+    }
+
     public ArrayList<Place> findAll(){
         //获取链接
         Connection conn = getConnection();

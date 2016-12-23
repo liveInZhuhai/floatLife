@@ -3,6 +3,7 @@ package dataservice.entity;
 import java.util.Date;
 
 /**
+ *
  * Created by D on 2016/12/12.
  */
 public class Player {
@@ -14,6 +15,14 @@ public class Player {
     private int reputation;
     private Date create_date;
     private int insurance;
+
+    public Player(String playerName, String password) {
+        this.playerName = playerName;
+        this.password = password;
+    }
+
+    public Player() {
+    }
 
     public int getId() {
         return id;

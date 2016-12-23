@@ -1,0 +1,1959 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>zhuhai</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>19500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Morgan1" sid="2642680363240241">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4172141313675038" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_03.png">
+                        <collision-poly>
+                            <point x="0.0368852" y="0.178478" />
+                            <point x="0.532787" y="0.00262467" />
+                            <point x="0.790984" y="0.333333" />
+                            <point x="0.790984" y="0.658793" />
+                            <point x="0.532787" y="0.997375" />
+                            <point x="0.331967" y="0.624672" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan3" sid="8600629360263882">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6570830537446525" speed="5">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.5" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_07.png">
+                        <collision-poly>
+                            <point x="0.0978261" y="0.175573" />
+                            <point x="0.554348" y="0.00763359" />
+                            <point x="0.952899" y="0.216285" />
+                            <point x="0.869565" y="0.496183" />
+                            <point x="0.978261" y="0.793893" />
+                            <point x="0.554348" y="0.992366" />
+                            <point x="0.0289855" y="0.86514" />
+                            <point x="0.336957" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan2" sid="5806467101096761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3542721179521222" speed="5">
+                    <frame duration="1" hotspotX="0.483333" hotspotY="0.488889" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_05.png">
+                        <collision-poly>
+                            <point x="0.043771" y="0.157623" />
+                            <point x="0.481481" y="0.00258398" />
+                            <point x="0.892256" y="0.178295" />
+                            <point x="0.848485" y="0.49354" />
+                            <point x="0.996633" y="0.888889" />
+                            <point x="0.481481" y="0.70801" />
+                            <point x="0.003367" y="0.860465" />
+                            <point x="0.373737" y="0.49354" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan4" sid="2044504709863773">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3857713417457767" speed="5">
+                    <frame duration="1" hotspotX="0.683333" hotspotY="0.5" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_14.png">
+                        <collision-poly>
+                            <point x="0.191953" y="0.202659" />
+                            <point x="0.688411" y="0" />
+                            <point x="1" y="0.186177" />
+                            <point x="1" y="0.921274" />
+                            <point x="0.688411" y="1" />
+                            <point x="0.256709" y="0.76964" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan5" sid="9333455640486713">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2394181711496271" speed="5">
+                    <frame duration="1" hotspotX="0.483333" hotspotY="0.5" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_13.png">
+                        <collision-poly>
+                            <point x="0.484848" y="0.00257069" />
+                            <point x="0.892256" y="0.192802" />
+                            <point x="0.959596" y="0.501285" />
+                            <point x="0.919192" y="0.832905" />
+                            <point x="0.484848" y="0.997429" />
+                            <point x="0.026936" y="0.85347" />
+                            <point x="0.117845" y="0.501285" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan6" sid="7892974757724126">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4045537554256212" speed="5">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.5" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_16.png">
+                        <collision-poly>
+                            <point x="0.123746" y="0.171795" />
+                            <point x="0.846154" y="0.279487" />
+                            <point x="0.953177" y="0.502564" />
+                            <point x="0.949833" y="0.807692" />
+                            <point x="0.110368" y="0.846154" />
+                            <point x="0.00334448" y="0.502564" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan7" sid="6467836873238777">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6653762161911865" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_20.png">
+                        <collision-poly>
+                            <point x="0.00341297" y="0.115789" />
+                            <point x="0.539249" y="0.00263158" />
+                            <point x="0.996587" y="0.178947" />
+                            <point x="0.539249" y="0.936842" />
+                            <point x="0.266212" y="0.739474" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan8" sid="7520456266135819">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9770594182220198" speed="5">
+                    <frame duration="1" hotspotX="0.516667" hotspotY="0.522222" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_21.png">
+                        <collision-poly>
+                            <point x="0.227273" y="0.314721" />
+                            <point x="0.517483" y="0.00253807" />
+                            <point x="0.954545" y="0.21066" />
+                            <point x="0.91958" y="0.525381" />
+                            <point x="0.951049" y="0.837563" />
+                            <point x="0.517483" y="0.997462" />
+                            <point x="0.0664336" y="0.852792" />
+                            <point x="0.0909091" y="0.525381" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan9" sid="1164240104787367">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5073366212995722" speed="5">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.522222" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_22.png">
+                        <collision-poly>
+                            <point x="0.0761589" y="0.15641" />
+                            <point x="0.55298" y="0.00512821" />
+                            <point x="0.937086" y="0.228205" />
+                            <point x="0.993378" y="0.525641" />
+                            <point x="0.903974" y="0.797436" />
+                            <point x="0.55298" y="0.992308" />
+                            <point x="0.0629139" y="0.905128" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan0" sid="6772896693240771">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3643803250659762" speed="5">
+                    <frame duration="1" hotspotX="0.483333" hotspotY="0.511111" original-source="E:\Picture\数字\images\images\电话上的数字设计矢量素材_00.png">
+                        <collision-poly>
+                            <point x="0.0873786" y="0.200508" />
+                            <point x="0.482201" y="0.00253807" />
+                            <point x="0.906149" y="0.180203" />
+                            <point x="0.89644" y="0.832487" />
+                            <point x="0.482201" y="0.994924" />
+                            <point x="0.0938511" y="0.814721" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Background" sid="6478821649509063">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Morgan_TChooseNum" sid="1789203910904682">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_white" sid="9822029526347639">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3376451817307063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TLottResults" sid="7438083274250645">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="6441878450991289">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Morgan_BClose" sid="7222741563184138">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2379671291286164" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Picture\CLOSE_B.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BOpen" sid="3359647684980437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6695543202263569" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Picture\OPEN_B.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TSounds" sid="6320585889976105">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TSetting" sid="5023168877583034">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TRestart" sid="2074623240567499">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TRename" sid="283407037892435">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Trename1" sid="5410523036150853">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_Title" sid="5088576793288207">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="8328584643627454">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7184358423274859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\Aiimg_com_55887_Katong\totoro.png">
+                        <collision-poly>
+                            <point x="0.210938" y="0.210938" />
+                            <point x="0.5" y="0.0976563" />
+                            <point x="0.742188" y="0.257813" />
+                            <point x="0.902344" y="0.5" />
+                            <point x="0.886719" y="0.886719" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.105469" y="0.894531" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TUser" sid="8055429868596023">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPassword" sid="4993547475923578">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Tpassword1" sid="4834332183222789">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Keyboard" sid="2841179673975354">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Morgan_Background2" sid="1445751551923715">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8884755579710741" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Picture\71858-106.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BBack" sid="6605676336823986">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5481236709977412" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1165449.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.125" />
+                            <point x="0.52" y="0.48" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.52" y="0.52" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BNext" sid="4243158722619342">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9880575666521277" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1165497.png">
+                        <collision-poly>
+                            <point x="0.48" y="0.48" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.48" y="0.52" />
+                            <point x="0.1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BPlay" sid="3418476981069684">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9688997668095155" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Picture\开始.png">
+                        <collision-poly>
+                            <point x="0.12" y="0.12" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.66" y="0.34" />
+                            <point x="0.865" y="0.5" />
+                            <point x="0.5" y="0.715" />
+                            <point x="0.12" y="0.88" />
+                            <point x="0.11" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BMusic" sid="436095790971022">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7122002718818726" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\声音1.png">
+                        <collision-poly>
+                            <point x="0.445" y="0.445" />
+                            <point x="0.5" y="0.435" />
+                            <point x="0.69" y="0.31" />
+                            <point x="0.69" y="0.5" />
+                            <point x="0.925" y="0.925" />
+                            <point x="0.5" y="0.825" />
+                            <point x="0.31" y="0.69" />
+                            <point x="0.005" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AJAX" sid="5159737245731121">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="Morgan_Tuser1" sid="9328644091002881">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type global="1" name="Dictionary" sid="1395176422257738">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="Morgan_BDelete" sid="3810645210660816">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469514832606923" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1165515.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.125" />
+                            <point x="0.52" y="0.48" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.52" y="0.52" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="2373019367641408">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Morgan_BSilence" sid="7142938088220553">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9689605364972524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\声音关.png">
+                        <collision-poly>
+                            <point x="0.445" y="0.445" />
+                            <point x="0.5" y="0.435" />
+                            <point x="0.69" y="0.31" />
+                            <point x="0.69" y="0.5" />
+                            <point x="0.68" y="0.68" />
+                            <point x="0.5" y="0.825" />
+                            <point x="0.31" y="0.69" />
+                            <point x="0.345" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Event" sid="4020237650186718">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8157212762748577" speed="5">
+                    <frame duration="1" hotspotX="0.487013" hotspotY="0.5" original-source="E:\Picture\RandomEvent.png">
+                        <collision-poly>
+                            <point x="0.714962" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.139346" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Background1" sid="1693648666571018">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6591276989273278" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Picture\71220-106.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BExit" sid="1277284944382913">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4201896240132666" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1165483.png">
+                        <collision-poly>
+                            <point x="0.015" y="0.015" />
+                            <point x="0.5" y="0" />
+                            <point x="0.785" y="0.215" />
+                            <point x="0.985" y="0.5" />
+                            <point x="0.785" y="0.785" />
+                            <point x="0.5" y="1" />
+                            <point x="0.01" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BHealth" sid="7438052890251364">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1231095367046232" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\18生命周期.png">
+                        <collision-poly>
+                            <point x="0.175" y="0.175" />
+                            <point x="0.5" y="0.245" />
+                            <point x="0.815" y="0.185" />
+                            <point x="0.705" y="0.5" />
+                            <point x="0.675" y="0.675" />
+                            <point x="0.5" y="0.845" />
+                            <point x="0.315" y="0.685" />
+                            <point x="0.14" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BMoney" sid="1356836720211597">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4908680870768595" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5125" original-source="E:\Picture\钱.png">
+                        <collision-poly>
+                            <point x="0.138408" y="0.2" />
+                            <point x="0.49827" y="0" />
+                            <point x="0.986159" y="0.02" />
+                            <point x="0.958477" y="0.5" />
+                            <point x="0.847751" y="0.78" />
+                            <point x="0.49827" y="1" />
+                            <point x="0.0103806" y="0.985" />
+                            <point x="0.0484429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BFame" sid="8846370385454495">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3902637460649162" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\信用.png">
+                        <collision-poly>
+                            <point x="0.26" y="0.26" />
+                            <point x="0.5" y="0.06" />
+                            <point x="0.76" y="0.24" />
+                            <point x="0.865" y="0.5" />
+                            <point x="0.79" y="0.79" />
+                            <point x="0.5" y="0.94" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0.145" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BHouse" sid="5823385077858481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4727149608773538" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\房产中介.png">
+                        <collision-poly>
+                            <point x="0.265" y="0.265" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.815" y="0.185" />
+                            <point x="0.815" y="0.815" />
+                            <point x="0.5" y="0.625" />
+                            <point x="0.155" y="0.845" />
+                            <point x="0.145" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Setting" sid="9185496190760806">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4530343749299538" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\设置.png">
+                        <collision-poly>
+                            <point x="0.0611354" y="0.07" />
+                            <point x="0.938865" y="0.07" />
+                            <point x="1" y="0.5" />
+                            <point x="0.938865" y="0.93" />
+                            <point x="0.0611354" y="0.93" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BDeposit" sid="9270509204847194">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9925122004381877" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\银行.png">
+                        <collision-poly>
+                            <point x="0.215" y="0.215" />
+                            <point x="0.5" y="0.115" />
+                            <point x="0.785" y="0.215" />
+                            <point x="0.855" y="0.5" />
+                            <point x="0.885" y="0.885" />
+                            <point x="0.115" y="0.885" />
+                            <point x="0.145" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_THealth" sid="8165025708066317">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TMoney" sid="6752242560896342">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TDeposit" sid="2783070170092696">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TFrame" sid="8989907358963612">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_BTreat" sid="5345866411715818">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4669997263775526" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.466667" original-source="E:\Picture\医疗.png">
+                        <collision-poly>
+                            <point x="0.252809" y="0.203593" />
+                            <point x="0.5" y="0.00598802" />
+                            <point x="0.747191" y="0.203593" />
+                            <point x="0.988764" y="0.467066" />
+                            <point x="0.955056" y="0.952096" />
+                            <point x="0.5" y="0.988024" />
+                            <point x="0.0449438" y="0.952096" />
+                            <point x="0.00561798" y="0.467066" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_BBuyMedicine" sid="2161636791275708">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3883744960451564" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\药店.png">
+                        <collision-poly>
+                            <point x="0.13" y="0.13" />
+                            <point x="0.5" y="0.435" />
+                            <point x="0.885" y="0.115" />
+                            <point x="0.92" y="0.5" />
+                            <point x="0.905" y="0.905" />
+                            <point x="0.5" y="0.91" />
+                            <point x="0.11" y="0.89" />
+                            <point x="0.105" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_DonateBlood" sid="140786926769394">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232249243180528" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\捐献排行.png">
+                        <collision-poly>
+                            <point x="0.14" y="0.14" />
+                            <point x="0.5" y="0.17" />
+                            <point x="0.86" y="0.14" />
+                            <point x="0.96" y="0.5" />
+                            <point x="0.8" y="0.8" />
+                            <point x="0.5" y="0.715" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0.035" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TTreat" sid="7833047623984769">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TBuyMedicine" sid="52923813305207">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TDonateBlood" sid="3163209908610546">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TTreat1" sid="5811810996727799">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TDonateBlood1" sid="5074363126773388">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TYiyuan" sid="8382090833121891">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Background3" sid="6899648625423182">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5255749617580282" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\71884-106.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Computer" sid="7233395639417265">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9641185828347993" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184004.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Tablet" sid="7738151277914688">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5512954326561878" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184005.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Phone" sid="4333731495955919">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9029199500758921" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184006.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Phone1" sid="2574536770138968">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4870468543777021" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184009.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_CD" sid="720438893114832">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6300990598447006" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184000.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Plus" sid="4825549337378175">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7694565337316132" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1159834.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Delete" sid="7632165969695445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3710135925435256" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\11598341.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TTabletAmount" sid="4461238581416709">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TTablet" sid="7632581591346914">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TComputerAmount" sid="37309389436607">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_T7000" sid="7565656621578517">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TComputer" sid="735893067952858">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_T14999" sid="5823964700506143">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TVideo" sid="5824450329567339">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_T50" sid="7144318035109171">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TVideoAmount" sid="9075688232177488">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TFail" sid="6466519752612157">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPhone" sid="335234654791814">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPhoneAmount" sid="3110875086747449">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_BBuy" sid="5332079821770798">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5634305581415525" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1159898.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TTotal" sid="2535199343773179">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_T5000" sid="6057637866816834">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Clothes" sid="2098394706537755">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7771985119839096" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1185728.png">
+                        <collision-poly>
+                            <point x="0.146667" y="0.146667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.853333" y="0.146667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853333" y="0.853333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146667" y="0.853333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Food" sid="9562408217487576">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="16847209642867" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1171571.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_House" sid="7871412243421275">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1917060246581147" speed="5">
+                    <frame duration="1" hotspotX="0.501639" hotspotY="0.501639" original-source="E:\Picture\inc\1185076.png">
+                        <collision-poly>
+                            <point x="0.147541" y="0.147541" />
+                            <point x="0.498361" y="0" />
+                            <point x="0.855738" y="0.144262" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.859016" y="0.859016" />
+                            <point x="0.498361" y="1" />
+                            <point x="0.144262" y="0.855738" />
+                            <point x="0" y="0.498361" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Wine" sid="348298692787397">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2502096451474389" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1171552.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Car" sid="4900282556783721">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3249691327623689" speed="5">
+                    <frame duration="1" hotspotX="0.501639" hotspotY="0.501639" original-source="E:\Picture\inc\1185149.png">
+                        <collision-poly>
+                            <point x="0.147541" y="0.147541" />
+                            <point x="0.498361" y="0" />
+                            <point x="0.855738" y="0.144262" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.859016" y="0.859016" />
+                            <point x="0.498361" y="1" />
+                            <point x="0.144262" y="0.855738" />
+                            <point x="0" y="0.498361" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Toy" sid="852937793734795">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2434760004037531" speed="5">
+                    <frame duration="1" hotspotX="0.501639" hotspotY="0.501639" original-source="E:\Picture\inc\1185159.png">
+                        <collision-poly>
+                            <point x="0.147541" y="0.147541" />
+                            <point x="0.498361" y="0" />
+                            <point x="0.855738" y="0.144262" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.859016" y="0.859016" />
+                            <point x="0.498361" y="1" />
+                            <point x="0.144262" y="0.855738" />
+                            <point x="0" y="0.498361" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Book" sid="8254133279021885">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1105085953934798" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1183992.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="8301628335689351">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5182146955416296" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Ticket" sid="1372061959738763">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7622834798873633" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\11839931.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Cunqia" sid="8607218081685625">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125064085391328" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1185144.png">
+                        <collision-poly>
+                            <point x="0.147541" y="0.147541" />
+                            <point x="0.498361" y="0" />
+                            <point x="0.855738" y="0.144262" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.855738" y="0.855738" />
+                            <point x="0.498361" y="1" />
+                            <point x="0.144262" y="0.855738" />
+                            <point x="0" y="0.498361" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Quqian" sid="7817727711577378">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1054395873001305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1185116.png">
+                        <collision-poly>
+                            <point x="0.147541" y="0.147541" />
+                            <point x="0.498361" y="0" />
+                            <point x="0.855738" y="0.144262" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.859016" y="0.859016" />
+                            <point x="0.498361" y="1" />
+                            <point x="0.144262" y="0.855738" />
+                            <point x="0" y="0.498361" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Huanqian" sid="1318681156213057">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3076476667192372" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1179926.png">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="1" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TCunkuan" sid="8594565836154621">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TQuqian" sid="8893602046589116">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THuanqian" sid="2764318717719082">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TBCunqian" sid="9117367094638732">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TBQuqian" sid="4358628081451936">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TBHuanqian" sid="5316524385124598">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_THComputerAmount" sid="512696130596127">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THTabletAmount" sid="7804022007431508">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THPhoneAmount" sid="4260234160645926">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THVideoAmount" sid="8327196853722695">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THFoodAmount" sid="1731157021159103">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THWineAmount" sid="2646372240292539">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THClothAmount" sid="3132519025983085">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THToyAmount" sid="5189850478154924">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THBookAmount" sid="357841206849523">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THTicketAmout" sid="8761759147329064">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THCarAmount" sid="7239208384753968">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THHouseAmount" sid="9490125659127015">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Makeup" sid="4154173500458146">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3911429967666638" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1185133.png">
+                        <collision-poly>
+                            <point x="0.147541" y="0.147541" />
+                            <point x="0.498361" y="0" />
+                            <point x="0.855738" y="0.144262" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.859016" y="0.859016" />
+                            <point x="0.498361" y="1" />
+                            <point x="0.144262" y="0.855738" />
+                            <point x="0" y="0.498361" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Baby" sid="9712203690058899">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1386031637792818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\11840015.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Cigarette" sid="1122247221961347">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4574971651502651" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\11840061.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Weige" sid="7025169082684675">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9064222407691277" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1173411.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_THMakeupAmount" sid="959992675573849">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THBabyAmount" sid="2090469013232548">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THCigaretteAmount" sid="6910146626955185">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THWeigeAmount" sid="8353897337404134">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_BSell" sid="7946979488153411">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5838280156210031" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1185207.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_THTotal" sid="3498213856523916">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Insurance" sid="3592232031326343">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6492977129952321" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1173409.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_HealthCare" sid="3204773164883614">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9120666594657014" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1173433.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Compensation" sid="6833991585504522">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1267546942486274" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1173434.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TInsurance" sid="188042978098679">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_THealthyCare" sid="284139898519553">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TTheCompensation" sid="3070241390054339">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TBInsurance" sid="3342366223768456">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TBHealthCare" sid="1402469509965294">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TBTheCompensation" sid="2392125108419783">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Sprite3" sid="7890766162941894">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8401048163632955" speed="5">
+                    <frame duration="1" hotspotX="0.501587" hotspotY="0.5" original-source="E:\Picture\2.png">
+                        <collision-poly>
+                            <point x="0.203175" y="0.216216" />
+                            <point x="0.498413" y="0.0371622" />
+                            <point x="0.806349" y="0.206081" />
+                            <point x="0.834921" y="0.5" />
+                            <point x="0.828571" y="0.817568" />
+                            <point x="0.498413" y="0.993243" />
+                            <point x="0.161905" y="0.827703" />
+                            <point x="0.111111" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Video" sid="8189587646412825">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3399144848529631" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184000.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Food_Plus" sid="4493660314844864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5574663128216303" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1159834.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Food_Delete" sid="2788281895069669">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9509045962905317" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\11598341.png">
+                        <collision-poly>
+                            <point x="0.144531" y="0.144531" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855469" y="0.144531" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="1" />
+                            <point x="0.144531" y="0.855469" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TPrice_Food" sid="5983635329500579">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Video" sid="4638316610214367">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Book_Delete" sid="815632858736769">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2249399182980683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TFoodAmount" sid="5429286944287147">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TBook" sid="5933239884263352">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Clothes_Plus" sid="5079437808047633">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6677857144637176" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Video_Plus" sid="7870291971571878">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3699678143216442" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TClothesAmount" sid="7817311680818372">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TBookAmount" sid="6633894038406423">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Clothes" sid="162431870970771">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TFood" sid="9090179347257861">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Video_Delete" sid="5542396576815551">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2273297776554034" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TClothes" sid="2863729275803782">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Book" sid="4332775079750494">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Book_Plus" sid="4123252309984287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6308433064334763" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Clothes_Delete" sid="8341562970276503">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1137468719012166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TPrice_Phone" sid="9798949423290454">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Computer" sid="9062194812028822">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Phone_Plus" sid="7911106568086354">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1324661183610569" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Computer_Delete" sid="1931180615589067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4188409280098875" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Phone_Delete" sid="22498924184708">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310350699478191" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Computer_Plus" sid="3581775800143199">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3156815878208756" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_IPhone" sid="3671946259766224">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="52883520222258" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Picture\inc\1184009.png">
+                        <collision-poly>
+                            <point x="0.154297" y="0.154297" />
+                            <point x="0.5" y="0.0117188" />
+                            <point x="0.845703" y="0.154297" />
+                            <point x="0.988281" y="0.5" />
+                            <point x="0.845703" y="0.845703" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.154297" y="0.845703" />
+                            <point x="0.0117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TCar" sid="388519947476537">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Car_Plus" sid="5011574100032021">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4324891644468171" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_IPhone_Delete" sid="5250434022096381">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8287352103079231" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TIPhone" sid="3946435947669292">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Car_Delete" sid="7984956665086811">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="164233277994554" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TCarAmount" sid="2968144530693498">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_IPhone_Plus" sid="4175113448868577">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7786577336665833" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TPrice_IPhone" sid="2198400915771414">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Car" sid="6104609017206255">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TIPhoneAmount" sid="4144513195839467">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_Ticket_Plus" sid="6643032387406159">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6333625976267331" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Tablet_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TTicketAmount" sid="7754212373655412">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TTicket" sid="5490178224498699">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TToy" sid="9515603889274837">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Toy" sid="7584275280515111">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Toy_Plus" sid="5343829157427371">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1023403672322096" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Tablet_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Toy_Delete" sid="3718477161823075">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7753980725386615" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Tablet_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TToyAmount" sid="4252881237184301">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TWine" sid="6838496011162593">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_TPrice_Ticket" sid="6049975136478346">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Ticket_Delete" sid="3630664867256203">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5962973920002105" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_Wine_Delete" sid="6377305472047889">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6410700102082173" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Tablet_Delete\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Morgan_TWineAmount" sid="3433339901672659">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Morgan_TWine_Toy" sid="4534297840461604">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Morgan_Wine_Plus" sid="2548172064768462">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2394235117538728" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admini\Desktop\final\Animations\Morgan_Video_Plus\Default\000.png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Start.xml</layout>
+        <layout>Login.xml</layout>
+        <layout>Lottery.xml</layout>
+        <layout>Setting.xml</layout>
+        <layout>RandomEvent.xml</layout>
+        <layout>Template.xml</layout>
+        <layout>Insurance.xml</layout>
+        <layout>Agency.xml</layout>
+        <layout>Bank.xml</layout>
+        <layout>Home.xml</layout>
+        <layout>Wanzaisha.xml</layout>
+        <layout>Hospital.xml</layout>
+        <layout>Map.xml</layout>
+        <layout>ZhuhaiGym.xml</layout>
+        <layout>ZhuhaiSupermarket.xml</layout>
+        <layout>NineCity.xml</layout>
+        <layout>GongbeiSupermacket.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Start.xml</event-sheet>
+        <event-sheet>Setting.xml</event-sheet>
+        <event-sheet>Lottery.xml</event-sheet>
+        <event-sheet>Login.xml</event-sheet>
+        <event-sheet>RandomEvent.xml</event-sheet>
+        <event-sheet>Hospital.xml</event-sheet>
+        <event-sheet>Template.xml</event-sheet>
+        <event-sheet>Wanzaisha.xml</event-sheet>
+        <event-sheet>Map.xml</event-sheet>
+        <event-sheet>Bank.xml</event-sheet>
+        <event-sheet>Agency.xml</event-sheet>
+        <event-sheet>Home.xml</event-sheet>
+        <event-sheet>Insurance.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="22" />
+        <global-instance type="Keyboard" uid="42" />
+        <global-instance type="AJAX" uid="47" />
+        <global-instance type="Audio" uid="29">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

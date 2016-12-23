@@ -25,6 +25,9 @@ public class PlayerService extends ServiceBase<Player> {
         return ps;
     }
 
+    private PlayerService() {
+    }
+
     /**
      * 根据用户名查找
      * @param playername 用户名
@@ -35,7 +38,7 @@ public class PlayerService extends ServiceBase<Player> {
         Connection conn = getConnection();
 
         //mysql语句对象
-        PreparedStatement findPS = null;
+        PreparedStatement findPS;
 
         try {
             //对sql语句进行预编译
