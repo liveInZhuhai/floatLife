@@ -18,7 +18,7 @@ import java.sql.SQLException;
  */
 public abstract class ServiceBase<T> {
     static GenericObjectPool<Connection> genericObjectPool;
-    public static void inilizeConnectionPool(){
+    public static void initializeConnectionPool(){
         genericObjectPool = new GenericObjectPool(new ConnFactory(),new ConnPoolConfig());
         try {
             for (int i=0;i<5;i++){
@@ -38,11 +38,7 @@ public abstract class ServiceBase<T> {
     }
     public void returnConnection(Connection conn){
         genericObjectPool.returnObject(conn);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 
     public abstract T findById(int id);

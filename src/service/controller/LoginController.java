@@ -10,18 +10,18 @@ import java.util.Map;
 
 /**
  * Created by Y on 2016/12/20.
+ *
  */
 public class LoginController extends ControllerBase{
 
     private PlayerService playerService = PlayerService.getPlayerService();
-
 
     public void login(Map<String,String> map, OutputStream outputStream){
         String username = map.get("username");                   //get username from map
         Player player = playerService.findByUsername(username);  //get player by username
         Map<String,String> returnMap = new HashMap<>();          //the map in order to return
         if (player == null){                                     //the condition of player is null
-            returnMap.put("status","flase");
+            returnMap.put("status","false");
         }
         else {
             boolean status =  player.getPassword().equals(map.get("password"));
@@ -40,7 +40,6 @@ public class LoginController extends ControllerBase{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
     }
 }

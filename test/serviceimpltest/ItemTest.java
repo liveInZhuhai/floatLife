@@ -10,12 +10,12 @@ import dataservice.serviceimpl.ItemService;
 public class ItemTest {
 
     public static void main(String[] args) {
-        ItemService ps = new ItemService();
+        ItemService ps = ItemService.getItemService();
         System.out.println("Start to Insert..");
         Item pl = new Item();
         pl.setItemName("DDD");
         pl.setRare(1);
-        pl = ps.addItem(pl);
+        pl = ps.add(pl);
         int id = pl.getId();
         System.out.println("InsertDone! ID:" + id);
         System.out.println("Start to find..");

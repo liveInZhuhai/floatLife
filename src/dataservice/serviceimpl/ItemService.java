@@ -25,6 +25,44 @@ public class ItemService extends ServiceBase<Item> {
         return is;
     }
 
+    public ArrayList<Item> findAll(){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement findAll;
+
+        try {
+            //对sql语句进行预编译
+            findAll = conn.prepareStatement("SELECT * FROM item");
+
+
+            //取回结果集
+            ResultSet rs = findAll.executeQuery();
+
+            ArrayList<Item> itemArrayList = new ArrayList<>();
+
+            while(rs.next()){
+                //新建结果实体
+                Item jg = new Item();
+                itemDataSet(jg,rs);
+                itemArrayList.add(jg);
+            }
+
+            //关闭结果集及连接
+            findAll.close();
+            rs.close();
+
+            //返回结果
+            return itemArrayList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            returnConnection(conn);
+        }
+        return null;
+    }
+
     /**
      * 按id查找Item
      * @param id 欲查找Item的id
@@ -155,6 +193,7 @@ public class ItemService extends ServiceBase<Item> {
         }
         return false;
     }
+
 
     /**
      * 通过结果集将信息映射到实体

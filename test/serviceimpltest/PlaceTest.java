@@ -16,7 +16,7 @@ public class PlaceTest {
         pl.setPlaceName("DDD");
         pl.setRandomValue(200);
         pl.setRandomPeople(600);
-        pl = ps.addPlace(pl);
+        pl = ps.add(pl);
         int id = pl.getId();
         System.out.println("InsertDone! ID:" + id);
         System.out.println("Start to find..");

@@ -1,19 +1,66 @@
 package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
-import dataservice.entity.EventList;
+import dataservice.entity.Event;
+import dataservice.entity.Item;
 
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by Admini on 2016/12/22.
  */
-public class EventListService extends ServiceBase<EventList> {
+public class EventListService extends ServiceBase<Event> {
+    private static EventListService els = null;
 
+    public static EventListService getEventListService() {
+        if(els == null){
+            els = new EventListService();
+        }
+        return els;
+    }
+
+    public ArrayList<Event> findAll(){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement findAll;
+
+        try {
+            //对sql语句进行预编译
+            findAll = conn.prepareStatement("SELECT * FROM eventlist");
+
+
+            //取回结果集
+            ResultSet rs = findAll.executeQuery();
+
+            ArrayList<Event> eventArrayList = new ArrayList<>();
+
+            while(rs.next()){
+                //新建结果实体
+                Event jg = new Event();
+                eventDataSet(jg,rs);
+                eventArrayList.add(jg);
+            }
+
+            //关闭结果集及连接
+            findAll.close();
+            rs.close();
+
+            //返回结果
+            return eventArrayList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            returnConnection(conn);
+        }
+        return null;
+    }
 
     @Override
-    public EventList findById(int id) {
+    public Event findById(int id) {
         //获取链接
         Connection conn = getConnection();
 
@@ -41,7 +88,7 @@ public class EventListService extends ServiceBase<EventList> {
             }
 
             //新建结果实体
-            EventList jg = new EventList();
+            Event jg = new Event();
 
             //使用结果集填充结果实体
             eventDataSet(jg,rs);
@@ -61,7 +108,7 @@ public class EventListService extends ServiceBase<EventList> {
     }
 
     @Override
-    public EventList add(EventList newpl) {
+    public Event add(Event newpl) {
         //通过基类的getConnection方法获取链接对象
         Connection conn = getConnection();
         //新建sql语句对象
@@ -114,7 +161,7 @@ public class EventListService extends ServiceBase<EventList> {
     }
 
 
-    protected void eventDataSet(EventList jg, ResultSet rs) throws SQLException {
+    protected void eventDataSet(Event jg, ResultSet rs) throws SQLException {
 
     }
 

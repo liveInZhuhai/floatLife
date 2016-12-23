@@ -2,9 +2,9 @@
 package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
+import dataservice.entity.Item;
 import dataservice.entity.Place;
 
-import java.lang.management.PlatformLoggingMXBean;
 import java.sql.*;
 import java.util.*;
 
@@ -23,6 +23,44 @@ public class PlaceService extends ServiceBase<Place> {
             ps = new PlaceService();
         }
         return ps;
+    }
+
+    public ArrayList<Place> findAll(){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement findAll;
+
+        try {
+            //对sql语句进行预编译
+            findAll = conn.prepareStatement("SELECT * FROM place");
+
+
+            //取回结果集
+            ResultSet rs = findAll.executeQuery();
+
+            ArrayList<Place> placeArrayList = new ArrayList<>();
+
+            while(rs.next()){
+                //新建结果实体
+                Place jg = new Place();
+                placeDataSet(jg,rs);
+                placeArrayList.add(jg);
+            }
+
+            //关闭结果集及连接
+            findAll.close();
+            rs.close();
+
+            //返回结果
+            return placeArrayList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            returnConnection(conn);
+        }
+        return null;
     }
 
     /**
@@ -79,10 +117,10 @@ public class PlaceService extends ServiceBase<Place> {
 
     /**
      * 添加新玩家
-     * @param newpl 一个Player类型的对象 其中只需对placename以及password赋值
+     * @param newel 一个Player类型的对象 其中只需对placename以及password赋值
      * @return 返回创建完成后的Player实体 如插入失败则返回null
      */
-    public Place add(Place newpl){
+    public Place add(Place newel){
         //通过基类的getConnection方法获取链接对象
         Connection conn = getConnection();
         //新建sql语句对象
@@ -90,14 +128,14 @@ public class PlaceService extends ServiceBase<Place> {
         //新建结果集对象
         ResultSet rs = null;
         //用于保存插入完成后id值的变量
-        int id = 0 ;
+        int id;
 
         try {
             //对mysql语句进行预编译
             addPS = conn.prepareStatement("INSERT INTO place(placeName) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
 
             //填入参数字符串
-            addPS.setString(1,newpl.getPlaceName());
+            addPS.setString(1,newel.getPlaceName());
 
             //执行插入
             addPS.executeUpdate();
@@ -114,7 +152,7 @@ public class PlaceService extends ServiceBase<Place> {
             id = rs.getInt(1);
 
             //调用service中的按id查找 将实体拉出并返回
-            newpl = findById(id);
+            newel = findById(id);
 
             //关闭结果集及链接
             rs.close();
@@ -126,7 +164,7 @@ public class PlaceService extends ServiceBase<Place> {
             returnConnection(conn);
         }
 
-        return newpl;
+        return newel;
     }
 
 
@@ -166,7 +204,7 @@ public class PlaceService extends ServiceBase<Place> {
      */
     private void placeDataSet(Place jg,ResultSet rs) throws SQLException{
         jg.setId(rs.getInt("id"));
-        jg.setPlaceName(rs.getString("placeName"));
+        jg.setPlaceName(rs.getString("placename"));
         jg.setRandomValue(rs.getInt("random_value"));
         jg.setRandomPeople(rs.getInt("random_people"));
         jg.setThings(rs.getString("things"));

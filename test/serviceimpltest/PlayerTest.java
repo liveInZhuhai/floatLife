@@ -16,7 +16,7 @@ public class PlayerTest {
         Player pl = new Player();
         pl.setPlayerName("DDD");
         pl.setPassword("um");
-        pl = ps.addPlayer(pl);
+        pl = ps.add(pl);
         int id = pl.getId();
         System.out.println("InsertDone! ID:" + id);
 

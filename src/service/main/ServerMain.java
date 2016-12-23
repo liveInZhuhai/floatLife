@@ -5,6 +5,8 @@ package service.main;
  */
 
 
+import dataservice.ServiceBase;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -32,7 +34,7 @@ public class ServerMain {
     public void start(int port) throws IOException {
 
         ServerSocket server = new ServerSocket(port);
-        System.out.println("开始监听端口"+port+"...........");
+        initialize();
 
         //使用一个true循环实现不断监听
         while (true) {
@@ -43,5 +45,10 @@ public class ServerMain {
             //启动线程
             serverThread.start();
         }
+    }
+
+    private void initialize(){
+        ServiceBase.initializeConnectionPool();
+        ServerCache.serverCacheInitlaizer();
     }
 }

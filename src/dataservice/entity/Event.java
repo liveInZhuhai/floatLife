@@ -3,7 +3,7 @@ package dataservice.entity;
 /**
  * Created by Y on 2016/12/22.
  */
-public class EventList {
+public class Event {
     private int id;
     private String eventName;
     private String eventNote;
