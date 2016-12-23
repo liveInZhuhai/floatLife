@@ -1,8 +1,7 @@
 package entityintomaptest;
 
 
-import service.controller.LoginController;
-
+import service.controller.AccountController;
 
 
 /**
@@ -10,7 +9,7 @@ import service.controller.LoginController;
  */
 public class Array2JsonTest {
     public static void main(String[] args) {
-        LoginController loginController = new LoginController();
+        AccountController loginController = new AccountController();
         Integer[][][] a = new Integer[1][10][3];
         a[0][0][0] = 1;
         loginController.array2Json(a);

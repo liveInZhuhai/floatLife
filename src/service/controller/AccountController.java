@@ -13,7 +13,7 @@ import java.util.Map;
  *  Edit by D on 2016/12/23.
  *  添加了注册方法
  */
-public class LoginController extends ControllerBase{
+public class AccountController extends ControllerBase{
 
     private PlayerService playerService = PlayerService.getPlayerService();
 

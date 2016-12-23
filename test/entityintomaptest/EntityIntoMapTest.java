@@ -2,7 +2,7 @@ package entityintomaptest;
 
 import com.alibaba.fastjson.JSON;
 import dataservice.entity.Player;
-import service.controller.LoginController;
+import service.controller.AccountController;
 
 import java.util.Map;
 
@@ -20,7 +20,7 @@ public class EntityIntoMapTest {
         player.setInsurance(55);
         player.setPlayerName("555555555555555555555sss");
 
-        LoginController loginController = new LoginController();
+        AccountController loginController = new AccountController();
         Map map = loginController.obj2Map(player);
         System.out.println(JSON.toJSONString(map));
     }

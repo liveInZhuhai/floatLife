@@ -11,8 +11,8 @@ public class URLMap {
 
     public static Map URLs = new HashMap();
     static {
-        URLs.put("/login","service.controller.LoginController#login");
-        URLs.put("/register","service.controller.LoginController#register");
+        URLs.put("/login","service.controller.AccountController#login");
+        URLs.put("/register","service.controller.AccountController#register");
 
     }
 }
