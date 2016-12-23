@@ -137,22 +137,29 @@ public class PlayerService extends ServiceBase<Player> {
         Connection conn = getConnection();
         //新建sql语句对象
         PreparedStatement addPS = null;
+        PreparedStatement addbackpack = null;
+        PreparedStatement addfin = null;
         //新建结果集对象
         ResultSet rs = null;
         //用于保存插入完成后id值的变量
         int id = 0 ;
 
         try {
+            conn.setAutoCommit(false);
             //对mysql语句进行预编译
             addPS = conn.prepareStatement("INSERT INTO player(playername,password) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
 
             //填入参数字符串
             addPS.setString(1,newpl.getPlayerName());
             addPS.setString(2,newpl.getPassword());
-
+            addbackpack = conn.prepareStatement("INSERT INTO backpack");
+            addfin = conn.prepareStatement("INSERT INTO fin");
             //执行插入
             addPS.executeUpdate();
+            addbackpack.execute();
+            addfin.execute();
 
+            conn.commit();
             //取回插入中生成键的结果集
             rs = addPS.getGeneratedKeys();
 
@@ -172,6 +179,12 @@ public class PlayerService extends ServiceBase<Player> {
             addPS.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            try{
+                conn.rollback();
+            }catch (SQLException a){
+                a.printStackTrace();
+            }
+
         }finally {
             //归还连接
             returnConnection(conn);

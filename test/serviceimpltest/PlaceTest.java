@@ -10,7 +10,7 @@ import dataservice.serviceimpl.PlaceService;
 public class PlaceTest {
 
     public static void main(String[] args) {
-        PlaceService ps = new PlaceService();
+        PlaceService ps = PlaceService.getPlaceService();
         System.out.println("Start to Insert..");
         Place pl = new Place();
         pl.setPlaceName("DDD");
