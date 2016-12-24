@@ -9,10 +9,11 @@ import java.util.Map;
  */
 public class URLMap {
 
-    public static Map URLs = new HashMap();
+    public static Map<String,String> URLs = new HashMap();
     static {
         URLs.put("/login","service.controller.AccountController#login");
         URLs.put("/register","service.controller.AccountController#register");
         URLs.put("/getfin","service.controller.InfoController#getfin");
+        URLs.put("/getbag","service.controller.InfoController#getbag");
     }
 }

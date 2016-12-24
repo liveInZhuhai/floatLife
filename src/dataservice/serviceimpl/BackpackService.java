@@ -2,7 +2,7 @@ package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
 import dataservice.entity.Backpack;
-import dataservice.entity.Event;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

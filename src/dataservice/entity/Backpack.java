@@ -27,6 +27,19 @@ public class Backpack {
         return result;
     }
 
+    public Integer[][] getItemArray(){
+        Integer data[][] = new Integer[hashPack.size()][3];
+        int i = 0;
+        for (ItemInBackpack temp :
+                hashPack.values()) {
+            data[i][0] = temp.getItemId();
+            data[i][1] = temp.getItemCount();
+            data[i][2] = temp.getItemPrize();
+            i++;
+        }
+        return data;
+    }
+
     public void parseItemMap(String items_id,String items_count,String items_buy){
         hashPack = new HashMap<>();
         String[] idl = items_id.split(",");

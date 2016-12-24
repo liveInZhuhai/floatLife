@@ -1,5 +1,7 @@
 package service.controller;
 
+import dataservice.entity.Backpack;
+import dataservice.serviceimpl.BackpackService;
 import dataservice.serviceimpl.FinService;
 
 import java.io.IOException;
@@ -14,6 +16,14 @@ public class InfoController extends ControllerBase {
 
         try {
             outputStream.write(map2Json(obj2Map(FinService.getFinService().findById(Integer.parseInt(params.get("userid"))))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void getbag(Map<String,String> params, OutputStream outputStream){
+        Backpack bp = BackpackService.getBackpackService().findById(Integer.parseInt(params.get("userid")));
+        try {
+            outputStream.write(array2Json(bp.getItemArray()));
         } catch (IOException e) {
             e.printStackTrace();
         }
