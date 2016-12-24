@@ -13,6 +13,6 @@ public class URLMap {
     static {
         URLs.put("/login","service.controller.AccountController#login");
         URLs.put("/register","service.controller.AccountController#register");
-
+        URLs.put("/getfin","service.controller.InfoController#getfin");
     }
 }

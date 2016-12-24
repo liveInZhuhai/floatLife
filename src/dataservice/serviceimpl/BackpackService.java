@@ -76,11 +76,43 @@ public class BackpackService extends ServiceBase<Backpack> {
         jg.setId(rs.getInt("id"));
         jg.setCurrent_count(rs.getInt("current_count"));
         jg.setItems_max(rs.getInt("items_max"));
-        jg.setItems_buy(rs.getString("items_buy"));
-        jg.setItems_count(rs.getString("items_count"));
-        jg.setItems_id(rs.getString("items_id"));
+        jg.parseItemMap(rs.getString("items_id"),rs.getString("items_count"),rs.getString("items_buy"));
     }
 
+    public boolean update(Backpack bp){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement updatePS = null;
+        try {
+            //对sql语句进行预编译
+            updatePS = conn.prepareStatement("UPDATE backpack SET items_id = ?, items_count = ?, items_buy = ?, current_count = ?, items_max = ? WHERE id=?");
+
+            String[] itemInfo = bp.getItemsInfoString();
+            //对sql变量赋值
+            updatePS.setString(1,itemInfo[0]);
+            updatePS.setString(2,itemInfo[1]);
+            updatePS.setString(3,itemInfo[2]);
+            updatePS.setInt(4,bp.getCurrent_count());
+            updatePS.setInt(5,bp.getItems_max());
+            updatePS.setInt(6,bp.getId());
+
+            updatePS.execute();
+            //关闭结果集及连接
+            updatePS.close();
+
+
+
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }finally {
+            returnConnection(conn);
+        }
+        return false;
+    }
 
 
     @Override

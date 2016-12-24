@@ -1,12 +1,42 @@
 package dataservice.entity;
 
+import java.util.HashMap;
+
 /**
  * Created by Y on 2016/12/22.
  * Edit by D on 2016/12/23.
  */
 public class Backpack {
     private int id, current_count,items_max;
-    private String items_id,items_count,items_buy;
+
+    private HashMap<Integer,ItemInBackpack> hashPack = null;
+
+    public String[] getItemsInfoString(){
+        String[] result = new String[3];
+        StringBuilder idsb = new StringBuilder("");
+        StringBuilder countsb = new StringBuilder("");
+        StringBuilder buysb = new StringBuilder("");
+        for(ItemInBackpack iib:hashPack.values()){
+            idsb.append(iib.getItemId()).append(",");
+            countsb.append(iib.getItemCount()).append(",");
+            buysb.append(iib.getItemPrize()).append(",");
+        }
+        result[0] = idsb.toString();
+        result[1] = countsb.toString();
+        result[2] = buysb.toString();
+        return result;
+    }
+
+    public void parseItemMap(String items_id,String items_count,String items_buy){
+        hashPack = new HashMap<>();
+        String[] idl = items_id.split(",");
+        String[] counts = items_count.split(",");
+        String[] buys = items_buy.split(",");
+        for (int i=0;i<idl.length;i++){
+            ItemInBackpack temp = new ItemInBackpack(Integer.parseInt(idl[i]),Integer.parseInt(counts[i]),Integer.parseInt(buys[i]));
+            hashPack.put(temp.getItemId(),temp);
+        }
+    }
 
     public int getId() {
         return id;
@@ -32,27 +62,4 @@ public class Backpack {
         this.items_max = items_max;
     }
 
-    public String getItems_id() {
-        return items_id;
-    }
-
-    public void setItems_id(String items_id) {
-        this.items_id = items_id;
-    }
-
-    public String getItems_count() {
-        return items_count;
-    }
-
-    public void setItems_count(String items_count) {
-        this.items_count = items_count;
-    }
-
-    public String getItems_buy() {
-        return items_buy;
-    }
-
-    public void setItems_buy(String items_buy) {
-        this.items_buy = items_buy;
-    }
 }

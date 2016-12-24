@@ -16,7 +16,7 @@ public class FinService extends ServiceBase<Fin> {
      * 单例的服务获取方法，供api中进行玩家信息的操作
      * @return FinService对象
      */
-    public static FinService getPlaceService(){
+    public static FinService getFinService(){
         if(fs == null){
             fs = new FinService();
         }
