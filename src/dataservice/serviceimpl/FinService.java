@@ -145,4 +145,35 @@ public class FinService extends ServiceBase<Fin> {
         jg.setCurrentDepositRate(rs.getInt("current_deposit_rate"));
         jg.setRent(rs.getInt("rent"));
     }
+    public boolean update(Fin fin){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement updatePS = null;
+        try {
+            //对sql语句进行预编译
+            updatePS = conn.prepareStatement("UPDATE fin SET cash = ?, debt = ?, current_deposit = ?, current_deposit_rate = ? WHERE id=?");
+
+            updatePS.setInt(1,fin.getCash());
+            updatePS.setInt(2,fin.getDebt());
+            updatePS.setInt(3,fin.getCurrentDeposit());
+            updatePS.setInt(4,fin.getCurrentDepositRate());
+            updatePS.setInt(5,fin.getId());
+
+            updatePS.execute();
+            //关闭结果集及连接
+            updatePS.close();
+
+
+
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }finally {
+            returnConnection(conn);
+        }
+        return false;
+    }
 }

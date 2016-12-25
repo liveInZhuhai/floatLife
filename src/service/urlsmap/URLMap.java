@@ -15,5 +15,8 @@ public class URLMap {
         URLs.put("/register","service.controller.AccountController#register");
         URLs.put("/getfin","service.controller.InfoController#getfin");
         URLs.put("/getbag","service.controller.InfoController#getbag");
+        URLs.put("/deposit_in","service.controller.FinController#deposit_in");
+        URLs.put("/deposit_out","service.controller.FinController#deposit_out");
+        URLs.put("/debt_out","service.controller.FinController#debt_out");
     }
 }
