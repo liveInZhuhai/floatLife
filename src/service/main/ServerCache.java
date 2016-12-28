@@ -20,7 +20,7 @@ public class ServerCache {
     private Map<Integer,Place> placeMap;
     private Map<Integer,Event> eventMap;
     private static ServerCache sc = null;
-    public ServerCache getCache(){
+    public static ServerCache getCache(){
         return sc;
     }
 
@@ -78,4 +78,29 @@ public class ServerCache {
     public Place getPlace(int id){
         return placeMap.get(id);
     }
+
+    public Map<Integer, Item> getItemMap() {
+        return itemMap;
+    }
+
+    public void setItemMap(Map<Integer, Item> itemMap) {
+        this.itemMap = itemMap;
+    }
+
+    public Map<Integer, Place> getPlaceMap() {
+        return placeMap;
+    }
+
+    public void setPlaceMap(Map<Integer, Place> placeMap) {
+        this.placeMap = placeMap;
+    }
+
+    public Map<Integer, Event> getEventMap() {
+        return eventMap;
+    }
+
+    public void setEventMap(Map<Integer, Event> eventMap) {
+        this.eventMap = eventMap;
+    }
+
 }
