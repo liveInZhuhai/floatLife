@@ -70,9 +70,6 @@ public class ActionController extends ControllerBase {
         //结果dictionary
         HashMap<String,String> resultMap = new HashMap<>();
 
-        //获取所需参数及资源
-        ServerCache sc = ServerCache.getCache();
-        Map<Integer,Event> eventMap = sc.getEventMap();
 
         int userId = Integer.parseInt(params.get("userid"));
 
@@ -88,6 +85,53 @@ public class ActionController extends ControllerBase {
             pl.setHealth(100);
             fs.update(fi);
             ps.update(pl);
+        }else{
+            resultMap.put("status","啊哦 现金不够了");
+        }
+
+
+
+        try{
+            outputStream.write(map2Json(resultMap));
+        }catch (Exception E){
+            E.printStackTrace();
+        }
+
+    }
+    public void cp(Map<String, String> params, OutputStream outputStream) {
+        //结果dictionary
+        HashMap<String,String> resultMap = new HashMap<>();
+
+        int userId = Integer.parseInt(params.get("userid"));
+        int num1 = Integer.parseInt(params.get("num1"));
+        int num2 = Integer.parseInt(params.get("num2"));
+        int num3 = Integer.parseInt(params.get("num3"));
+        int num4 = Integer.parseInt(params.get("num4"));
+        FinService fs = FinService.getFinService();
+        Fin fi = fs.findById(userId);
+
+
+        if(fi.getCash()>200){
+            int r1,r2,r3,r4;
+            r1 = (int)(Math.random()*10);
+            r2 = (int)(Math.random()*10);
+            r3 = (int)(Math.random()*10);
+            r4 = (int)(Math.random()*10);
+            resultMap.put("num1",""+r1);
+            resultMap.put("num2",""+r2);
+            resultMap.put("num3",""+r3);
+            resultMap.put("num4",""+r4);
+            if(num1 == r1&&num2 == r2&&num3 == r3&&num4 == r4){
+                resultMap.put("status","true");
+                fi.setCash(fi.getCash()-200+100000);
+            }else{
+                resultMap.put("status","很遗憾 没有中奖");
+                fi.setCash(fi.getCash()-200);
+            }
+
+
+            fs.update(fi);
+
         }else{
             resultMap.put("status","啊哦 现金不够了");
         }

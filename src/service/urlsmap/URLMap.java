@@ -21,5 +21,6 @@ public class URLMap {
         URLs.put("/debt_out","service.controller.FinController#debt_out");
         URLs.put("/moveto","service.controller.ActionController#moveto");
         URLs.put("/hospital","service.controller.ActionController#hospital");
+        URLs.put("/cp","service.controller.ActionController#cp");
     }
 }
