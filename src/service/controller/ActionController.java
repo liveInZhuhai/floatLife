@@ -66,5 +66,39 @@ public class ActionController extends ControllerBase {
         }
 
     }
+    public void hospital(Map<String, String> params, OutputStream outputStream) {
+        //结果dictionary
+        HashMap<String,String> resultMap = new HashMap<>();
 
+        //获取所需参数及资源
+        ServerCache sc = ServerCache.getCache();
+        Map<Integer,Event> eventMap = sc.getEventMap();
+
+        int userId = Integer.parseInt(params.get("userid"));
+
+        FinService fs = FinService.getFinService();
+        Fin fi = fs.findById(userId);
+
+
+        if(fi.getCash()>500){
+            resultMap.put("status","true");
+            fi.setCash(fi.getCash()-500);
+            PlayerService ps = PlayerService.getPlayerService();
+            Player pl = ps.findById(userId);
+            pl.setHealth(100);
+            fs.update(fi);
+            ps.update(pl);
+        }else{
+            resultMap.put("status","啊哦 现金不够了");
+        }
+
+
+
+        try{
+            outputStream.write(map2Json(resultMap));
+        }catch (Exception E){
+            E.printStackTrace();
+        }
+
+    }
 }
