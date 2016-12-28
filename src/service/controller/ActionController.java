@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by D on 2016/12/28.
  */
-public class ActionController {
+public class ActionController extends ControllerBase {
     public void moveto(Map<String, String> params, OutputStream outputStream) {
         int placeId = Integer.parseInt(params.get("placeid"));
         int userId = Integer.parseInt(params.get("userid"));
@@ -26,6 +26,11 @@ public class ActionController {
             resultMap.put("eventNote",e.getEventNote());
         }else{
             resultMap.put("status","false");
+        }
+        try{
+            outputStream.write(map2Json(resultMap));
+        }catch (Exception E){
+            E.printStackTrace();
         }
 
     }
