@@ -1,9 +1,6 @@
 package service.main;
 
-import dataservice.entity.Event;
-import dataservice.entity.Item;
-import dataservice.entity.Place;
-import dataservice.entity.PrizeEffect;
+import dataservice.entity.*;
 import dataservice.serviceimpl.EventListService;
 import dataservice.serviceimpl.ItemService;
 import dataservice.serviceimpl.PlaceService;
@@ -21,6 +18,8 @@ public class ServerCache {
     private Map<Integer,Place> placeMap;
     private Map<Integer,Event> eventMap;
     private Map<Integer,PrizeEffect> prizeEffectMap = new HashMap<>();
+    private Map<Integer,Backpack> backpackMap = new HashMap<>();
+
     private static ServerCache sc = null;
     public static ServerCache getCache(){
         return sc;
@@ -112,6 +111,14 @@ public class ServerCache {
     }
 
     public PrizeEffect getPrizeEffect(int playerId){
-        return prizeEffectMap.get(playerId);
+        return prizeEffectMap.getOrDefault(playerId,null);
+    }
+
+    public void addBackPackCache(int playerId,Backpack bp){
+        backpackMap.put(playerId,bp);
+    }
+
+    public Backpack getBackPack(int playerId){
+        return backpackMap.getOrDefault(playerId,null);
     }
 }
