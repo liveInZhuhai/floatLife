@@ -15,6 +15,7 @@ public class Player {
     private int reputation;
     private Date create_date;
     private int insurance;
+    private int day;
 
     public Player(String playerName, String password) {
         this.playerName = playerName;
@@ -86,5 +87,13 @@ public class Player {
 
     public void setInsurance(int insurance) {
         this.insurance = insurance;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
     }
 }

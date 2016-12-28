@@ -75,4 +75,7 @@ public class Backpack {
         this.items_max = items_max;
     }
 
+    public HashMap<Integer, ItemInBackpack> getHashPack() {
+        return hashPack;
+    }
 }

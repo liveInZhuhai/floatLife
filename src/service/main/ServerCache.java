@@ -24,6 +24,8 @@ public class ServerCache {
         return sc;
     }
 
+
+
     public static void serverCacheInitlaizer(){
         sc = new ServerCache();
     }

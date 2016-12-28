@@ -1,5 +1,7 @@
 package dataservice.entity;
 
+import service.main.ServerCache;
+
 /**
  * Created by Y on 2016/12/22.
  */
@@ -113,4 +115,23 @@ public class Event {
     }
 
     private int effectItemCount;
+
+    public void work(Player pl,Fin fi,Backpack bp){
+        //健康度
+        pl.setHealth(pl.getHealth() + getEffectHealth());
+
+        //经济影响
+        switch (moneyEffectType){
+            case 1:
+                fi.setCash(fi.getCash() + (int)getMoneyEffect());
+                break;
+            case 2:
+                fi.setCurrentDeposit(fi.getCurrentDeposit() + (int)getMoneyEffect());
+                break;
+        }
+
+        //商品价格影响
+        ServerCache sc = ServerCache.getCache();
+
+    }
 }

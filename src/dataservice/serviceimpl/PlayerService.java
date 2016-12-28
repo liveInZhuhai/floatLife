@@ -235,6 +235,7 @@ public class PlayerService extends ServiceBase<Player> {
         jg.setReputation(rs.getInt("reputation"));
         jg.setCreate_date(new java.util.Date(rs.getTimestamp("create_date").getTime()));
         jg.setInsurance(rs.getInt("insurance"));
+        jg.setDay(rs.getInt("day"));
     }
 
 }
