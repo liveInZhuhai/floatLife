@@ -118,20 +118,36 @@ public class Event {
 
     public void work(Player pl,Fin fi,Backpack bp){
         //健康度
-        pl.setHealth(pl.getHealth() + getEffectHealth());
-
-        //经济影响
-        switch (moneyEffectType){
-            case 1:
-                fi.setCash(fi.getCash() + (int)getMoneyEffect());
-                break;
-            case 2:
-                fi.setCurrentDeposit(fi.getCurrentDeposit() + (int)getMoneyEffect());
-                break;
+        if (getEffectHealth() != 0){
+            pl.setHealth(pl.getHealth() + getEffectHealth());
         }
 
+
+        //经济影响
+        if (moneyEffectType != 0){
+            switch (moneyEffectType){
+                case 1:
+                    fi.setCash(fi.getCash() + (int)getMoneyEffect());
+                    break;
+                case 2:
+                    fi.setCurrentDeposit(fi.getCurrentDeposit() + (int)getMoneyEffect());
+                    break;
+            }
+        }
+
+
         //商品价格影响
-        ServerCache sc = ServerCache.getCache();
+        if(getPrizeEffectId() != 0){
+            ServerCache sc = ServerCache.getCache();
+            sc.addPrizeEffect(pl.getId(),new PrizeEffect(getPrizeEffectId(),getPrizeEffect()));
+
+        }
+
+        //物品数量影响
+        if(getEffectItem() != 0){
+            ItemInBackpack e = bp.getHashPack().get(getEffectItem());
+            e.setItemCount(e.getItemCount()+getEffectItemCount());
+        }
 
     }
 }

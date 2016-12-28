@@ -3,9 +3,7 @@ package dataservice.serviceimpl;
 import dataservice.ServiceBase;
 import dataservice.entity.Player;
 
-import java.lang.management.PlatformLoggingMXBean;
 import java.sql.*;
-import java.util.*;
 
 /**
  * Player表Service
@@ -235,7 +233,35 @@ public class PlayerService extends ServiceBase<Player> {
         jg.setReputation(rs.getInt("reputation"));
         jg.setCreate_date(new java.util.Date(rs.getTimestamp("create_date").getTime()));
         jg.setInsurance(rs.getInt("insurance"));
-        jg.setDay(rs.getInt("day"));
+        jg.setDayCount(rs.getInt("daycount"));
     }
 
+    public boolean update(Player pl){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement findPS = null;
+
+        try {
+            //对sql语句进行预编译
+            findPS = conn.prepareStatement("UPDATE SET health=?, reputation=?, insurance=?, daycount=? WHERE id=?");
+
+            //对sql变量赋值
+            findPS.setInt(1,pl.getHealth());
+            findPS.setInt(1,pl.getReputation());
+            findPS.setInt(1,pl.getInsurance());
+            findPS.setInt(1,pl.getDayCount());
+            findPS.setInt(1,pl.getId());
+
+            //执行sql语句 并返回结果
+            return findPS.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            returnConnection(conn);
+        }
+        return false;
+    }
 }

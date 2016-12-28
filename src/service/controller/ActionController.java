@@ -26,9 +26,12 @@ public class ActionController extends ControllerBase {
         Map<Integer,Event> eventMap = sc.getEventMap();
         int placeId = Integer.parseInt(params.get("placeid"));
         int userId = Integer.parseInt(params.get("userid"));
-        Player pl = PlayerService.getPlayerService().findById(userId);
-        Fin fi = FinService.getFinService().findById(userId);
-        Backpack bp = BackpackService.getBackpackService().findById(userId);
+        PlayerService ps = PlayerService.getPlayerService();
+        Player pl = ps.findById(userId);
+
+
+        //时间推移
+        pl.setDayCount(pl.getDayCount() + 1);
 
         //随机事件判断及插入
         int randomNum = (int)Math.ceil(Math.random()*eventMap.size());
@@ -38,11 +41,24 @@ public class ActionController extends ControllerBase {
             resultMap.put("status","true");
             resultMap.put("eventName",e.getEventName());
             resultMap.put("eventNote",e.getEventNote());
+
+            FinService fs = FinService.getFinService();
+            Fin fi = fs.findById(userId);
+            BackpackService bs = BackpackService.getBackpackService();
+            Backpack bp = bs.findById(userId);
+
+            e.work(pl,fi,bp);
+
+            fs.update(fi);
+            bs.update(bp);
         }else{
             resultMap.put("status","false");
         }
 
+        //TODO 此处需要填充出售物品的数组json
+        resultMap.put("sellarray","=========================");
 
+        ps.update(pl);
         try{
             outputStream.write(map2Json(resultMap));
         }catch (Exception E){
