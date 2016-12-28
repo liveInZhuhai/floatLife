@@ -110,4 +110,8 @@ public class ServerCache {
     public void addPrizeEffect(int playerId,PrizeEffect pe){
         prizeEffectMap.put(playerId,pe);
     }
+
+    public PrizeEffect getPrizeEffect(int playerId){
+        return prizeEffectMap.get(playerId);
+    }
 }
