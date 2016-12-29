@@ -2,10 +2,9 @@ package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
 import dataservice.entity.Fin;
-import dataservice.entity.Place;
-import dataservice.entity.Player;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by Y on 2016/12/22.
@@ -175,5 +174,38 @@ public class FinService extends ServiceBase<Fin> {
             returnConnection(conn);
         }
         return false;
+    }
+    public ArrayList<Integer> rankList(){
+        //获取链接
+        Connection conn = getConnection();
+
+        //mysql语句对象
+        PreparedStatement queryPS = null;
+        try {
+            //对sql语句进行预编译
+            queryPS = conn.prepareStatement("select id from fin order by (cash + current_deposit - debt) DESC LIMIT 10");
+
+            ResultSet rs = queryPS.executeQuery();
+
+            ArrayList<Integer> al = new ArrayList<>();
+
+            while(rs.next()){
+                al.add(rs.getInt("id"));
+            }
+
+
+            //关闭结果集及连接
+            queryPS.close();
+
+
+
+            return al;
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }finally {
+            returnConnection(conn);
+        }
+        return null;
     }
 }
