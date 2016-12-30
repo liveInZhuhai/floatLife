@@ -6,6 +6,7 @@ import dataservice.entity.Fin;
 import dataservice.entity.Place;
 import dataservice.serviceimpl.PlaceService;
 import org.apache.commons.pool2.impl.GenericObjectPool;
+import service.main.ServerCache;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +19,7 @@ import java.sql.SQLException;
  */
 public abstract class ServiceBase<T> {
     static GenericObjectPool<Connection> genericObjectPool;
+    protected static ServerCache serverCache = ServerCache.getCache();
     public static void initializeConnectionPool(){
         genericObjectPool = new GenericObjectPool(new ConnFactory(),new ConnPoolConfig());
         try {

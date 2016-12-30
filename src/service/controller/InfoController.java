@@ -9,9 +9,11 @@ import dataservice.serviceimpl.PlayerService;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
+ * 
  * Created by D on 2016/12/23.
  */
 public class InfoController extends ControllerBase {
@@ -44,5 +46,15 @@ public class InfoController extends ControllerBase {
             e.printStackTrace();
         }
     }
+
+//    public void rankList(Map<String, String> params, OutputStream outputStream) {
+//        ArrayList<Integer> rl  = FinService.getFinService().rankList();
+//        try {
+//            ArrayList<Object[]>
+//            outputStream.write(map2Json(map));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
 

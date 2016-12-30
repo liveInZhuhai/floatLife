@@ -2,6 +2,7 @@ package dataservice.serviceimpl;
 
 import dataservice.ServiceBase;
 import dataservice.entity.Backpack;
+import service.main.ServerCache;
 
 
 import java.sql.Connection;
@@ -26,6 +27,9 @@ public class BackpackService extends ServiceBase<Backpack> {
 
     @Override
     public Backpack findById(int id) {
+        Backpack bp = serverCache.getBackPack(id);
+        if(bp != null) return bp;
+
         //获取链接
         Connection conn = getConnection();
 

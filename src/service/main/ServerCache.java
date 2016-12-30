@@ -1,8 +1,6 @@
 package service.main;
 
-import dataservice.entity.Event;
-import dataservice.entity.Item;
-import dataservice.entity.Place;
+import dataservice.entity.*;
 import dataservice.serviceimpl.EventListService;
 import dataservice.serviceimpl.ItemService;
 import dataservice.serviceimpl.PlaceService;
@@ -19,10 +17,15 @@ public class ServerCache {
     private Map<Integer,Item> itemMap;
     private Map<Integer,Place> placeMap;
     private Map<Integer,Event> eventMap;
+    private Map<Integer,PrizeEffect> prizeEffectMap = new HashMap<>();
+    private Map<Integer,Backpack> backpackMap = new HashMap<>();
+
     private static ServerCache sc = null;
-    public ServerCache getCache(){
+    public static ServerCache getCache(){
         return sc;
     }
+
+
 
     public static void serverCacheInitlaizer(){
         sc = new ServerCache();
@@ -77,5 +80,45 @@ public class ServerCache {
 
     public Place getPlace(int id){
         return placeMap.get(id);
+    }
+
+    public Map<Integer, Item> getItemMap() {
+        return itemMap;
+    }
+
+    public void setItemMap(Map<Integer, Item> itemMap) {
+        this.itemMap = itemMap;
+    }
+
+    public Map<Integer, Place> getPlaceMap() {
+        return placeMap;
+    }
+
+    public void setPlaceMap(Map<Integer, Place> placeMap) {
+        this.placeMap = placeMap;
+    }
+
+    public Map<Integer, Event> getEventMap() {
+        return eventMap;
+    }
+
+    public void setEventMap(Map<Integer, Event> eventMap) {
+        this.eventMap = eventMap;
+    }
+
+    public void addPrizeEffect(int playerId,PrizeEffect pe){
+        prizeEffectMap.put(playerId,pe);
+    }
+
+    public PrizeEffect getPrizeEffect(int playerId){
+        return prizeEffectMap.getOrDefault(playerId,null);
+    }
+
+    public void addBackPackCache(int playerId,Backpack bp){
+        backpackMap.put(playerId,bp);
+    }
+
+    public Backpack getBackPack(int playerId){
+        return backpackMap.getOrDefault(playerId,null);
     }
 }
