@@ -120,6 +120,14 @@
           <Count>13</Count>
         </Item>
       </Statistic>
+      <Statistic Action="Run 'MajorAndSubjec....main()'">
+        <Item>
+          <IdeaActionID />
+          <ShortCut>'Ctrl+Shift+F10'</ShortCut>
+          <Description>Run 'MajorAndSubjec....main()'</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
       <Statistic Action="Run 'RecordmeApplication'">
         <Item>
           <IdeaActionID>Run</IdeaActionID>
