@@ -125,14 +125,21 @@
           <IdeaActionID>Run</IdeaActionID>
           <ShortCut>'Shift+F10'</ShortCut>
           <Description>Run 'BDSSiteApplication'</Description>
-          <Count>13</Count>
+          <Count>15</Count>
         </Item>
       </Statistic>
       <Statistic Action="Run 'MajorAndSubjec....main()'">
         <Item>
-          <IdeaActionID />
           <ShortCut>'Ctrl+Shift+F10'</ShortCut>
           <Description>Run 'MajorAndSubjec....main()'</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Run 'MajorAndSubjectGeneratorMain'">
+        <Item>
+          <IdeaActionID>Run</IdeaActionID>
+          <ShortCut>'Shift+F10'</ShortCut>
+          <Description>Run 'MajorAndSubjectGeneratorMain'</Description>
           <Count>1</Count>
         </Item>
       </Statistic>
@@ -173,7 +180,7 @@
           <IdeaActionID>Stop</IdeaActionID>
           <ShortCut>'Ctrl+F2'</ShortCut>
           <Description>Stop 'BDSSiteApplication'</Description>
-          <Count>6</Count>
+          <Count>7</Count>
         </Item>
       </Statistic>
       <Statistic Action="Stop 'RecordmeApplication'">
